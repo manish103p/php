@@ -637,7 +637,7 @@ if(isset($_SESSION['username']) and isset($_SESSION['loggedin']) and $_SESSION['
   $select_trip_query="select * from trip;";
   $rows=mysqli_query($link,$select_trip_user_query);
  
-  while($row=mysqli_fetch_array($rows,MYSQLI_BOTH)){
+  while($row=mysqli_fetch_array($rows, MYSQLI_BOTH)){
     $trip=mysqli_query($link,$select_trip_query);
     while($place=mysqli_fetch_array($trip,MYSQLI_BOTH)){
     if($row['trip_id']==$place['tripId'] ){
