@@ -36,15 +36,19 @@
         $timeslot_start = $_POST["timeslot_start"];
         $timeslot_end = $_POST["timeslot_end"];
         $price = $_POST["price"];
-        $refreshments = $_POST["refreshments"];
-        $changingRoom = $_POST["changingRoom"];
         $size = $_POST["size"];
-        $seating = $_POST["seating"];
-
+        if (isset($_POST['refreshments'])) $refreshments = 1;
+        else $refreshments = 0;
+        if (isset($_POST['changingRoom'])) $changingRoom = 1;
+        else $changingRoom = 0;
+        if (isset($_POST['seating'])) $seating = 1;
+        else $seating = 0;
         
-            $insert_query = "insert into turf (turf_name,email,contact_number,turf_address,timeslot_start,timeslot_end,price,refreshments,changingRoom,size,seating) values ('$turf_name','$email','$contact_number','$turf_address','$timeslot_start','$timeslot_end','$price','$refreshments','$changingRoom','$size','$seating');";
-            if (mysqli_query($link, $insert_query)) {
-                echo "<div style='background-color: rgb(0, 0, 0);
+
+
+        $insert_query = "insert into turf (turf_name,email,contact_number,turf_address,timeslot_start,timeslot_end,price,refreshments,changingRoom,size,seating) values ('$turf_name','$email','$contact_number','$turf_address','$timeslot_start','$timeslot_end','$price','$refreshments','$changingRoom','$size','$seating');";
+        if (mysqli_query($link, $insert_query)) {
+            echo "<div style='background-color: rgb(0, 0, 0);
 								margin:auto;
 								margin-top:60px;
 								margin-bottom:-65px;
@@ -57,8 +61,8 @@
 								color: rgba(17,238,17, 1);
 								box-shadow: 7px 7px 10px #252525;'>Turf has been added to the website. 
 						</div>";
-            } else {
-                echo "<div style='background-color: rgb(0, 0, 0);
+        } else {
+            echo "<div style='background-color: rgb(0, 0, 0);
 								margin:auto;
 								margin-top:60px;
 								margin-bottom:-65px;
@@ -71,9 +75,9 @@
 								color: rgba(255,205,0, 1);
 								box-shadow: 7px 7px 10px #252525;'>Some error occured. Turf has not been added.
 						</div>";
-            }
         }
-    
+    }
+
     mysqli_close($link);
 
     ?>
@@ -128,11 +132,11 @@
                         <span class="input-group-addon">
                             <i class="fa fa-child"></i>
                         </span>
-                        <label for="timeslot_start">From</label>
-                        <input type="time" id="timeslot_start" name="timeslot_start" min="09:00" max="18:00" required>
-                        <label for="timeslot_start">To</label>
-                        <input type="time" id="timeslot_end" name="timeslot_end" min="09:00" max="18:00" required>
-                        <small>Turf hours are 9am to 6pm</small>
+                        <label for="timeslot_start">From::</label>
+                        <input type="datetime-local" id="timeslot_start" name="timeslot_start" min="09:00" max="18:00" required>
+                        <br><label for="timeslot_start">To::</label>
+                        <input type="datetime-local" id="timeslot_end" name="timeslot_end" min="09:00" max="18:00" required>
+                        <br><small>Turf hours are 9am to 6pm</small>
                     </div>
                 </div>
                 <div class="form-group">
@@ -146,13 +150,13 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="fa fa-child"></i>
+                            <i class="fa fa-child"></i> Amenities
                         </span>
-                        <input type="checkbox" id="refreshments" name="refreshments" value="true">
-                        <label for="refreshments"> Refreshments Available</label><br>
-                        <input type="checkbox" id="changingRoom" name="changingRoom" value="true">
+                        <input type="checkbox" id="refreshments" name="refreshments" value=1>
+                        <br><label for="refreshments"> Refreshments Available</label><br>
+                        <input type="checkbox" id="changingRoom" name="changingRoom" value=1>
                         <label for="changingRoom"> Changing Room Available</label><br>
-                        <input type="checkbox" id="seating" name="seating" value="true">
+                        <input type="checkbox" id="seating" name="seating" value=1>
                         <label for="seating"> Seating Area Available</label><br><br>
                     </div>
                 </div>
@@ -161,7 +165,7 @@
                         <span class="input-group-addon">
                             <i class="fa fa-child"></i>
                         </span>
-                        <input type="number" class="form-control" placeholder="Enter turf size" name="size" required>
+                        <input type="text" class="form-control" placeholder="Enter turf size" name="size" required>
                     </div>
                 </div>
             </div>
