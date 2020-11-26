@@ -22,13 +22,13 @@ body{
     /* Style the links inside the navigation bar */
 .topnav a {
     float: right;
-    color: #f2f2f2;
+    color: #d6ed17ff;
     text-align: center;
     padding: 15px 19px;
     text-decoration: none;
     font-size: 1.2vw;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: #d6ed17ff;
 }
 
 .topnav a img{
@@ -38,7 +38,7 @@ body{
 }
     /* Change the color of links on hover */
 .topnav a:hover {
-    background-color:rgba(255,255,255,0.8);
+    background-color:#d6ed17ff;
     color:#606060ff;
 }
 
@@ -64,11 +64,11 @@ body{
     display: inline-block;
     margin-top: 15px;
     margin-right: 7px;
-    background:rgb(0,0,0);
+    background:#d6ed17ff;
     height:auto ;
-    color:white;
+    color:#606060ff;
     border-radius: 10px;
-    border:3.5px solid white;
+    border:3.5px solid #606060ff;
     transition: margin 1s ease;
     
   }
@@ -90,12 +90,12 @@ body{
 
 
 
- /* sanyam */
+
 
  .heading{
     right: 0;
     left: 0;
-    color: rgba(255,205,0, 1);
+    color:#d6ed17ff;
     font-size: 1.5em !important;
     text-align: center;
     font-family: Comic Sans MS !important;
@@ -105,7 +105,7 @@ body{
     margin: 0;
     padding-top: 0;
     text-align: center;
-    color: purple;
+    color: #d6ed17ff;
     font-family: sans-serif;
 
 }
