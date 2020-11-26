@@ -12,7 +12,16 @@
     <script src="../js/register.js"></script>
     <?php
     include '../../mysqli_connect.php';
- 
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
+
+} else {
+    echo "Please log in first to see this page.";
+    header("location:login.php");
+}
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -72,7 +81,7 @@
 </head>
 
 <body>
-    <a class="homebutton" href="..\html\homepage.php"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Home</a>
+    <a class="homebutton" href="..\admin\homepage.php"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Home</a>
     <form id="regForm" name="regForm" action="add.php" name="RegisterForm" onsubmit="return validatesignup()" method="POST">
         <div class="yoo">
             <h4 class="title">Post</h4>

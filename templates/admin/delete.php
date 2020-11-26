@@ -46,11 +46,9 @@
         if(!isset($_SESSION)){
             session_start();
         }
-            $email=$_SESSION['username']; 
             $turfId=$_POST["turfId"];
-            $insert_query="insert into turf_user (email,turf_id) values ('$email','$turfId');";
-            $set_query="UPDATE turf SET booked = 1 WHERE id = '$turfId';";
-            if(mysqli_query($link,$insert_query) && mysqli_query($link,$set_query))
+            $insert_query="DELETE FROM turf WHERE id='$turfId';";
+            if(mysqli_query($link,$insert_query))
 				{ 
 					echo "<div style='background-color: rgb(0, 0, 0);
 								margin:auto;
@@ -63,7 +61,7 @@
 								border-radius: 15px;
 								text-align: center;
 								color: rgba(17,238,17, 1);
-                                box-shadow: 7px 7px 10px #252525;'>You have been registered for the trek.
+                                box-shadow: 7px 7px 10px #252525;'>YOU have DELETED the TURF.
                                 <br>
                         </div>
                         <center><a class='homebutton' href='homepage.php'><i class='fa fa-caret-left'></i>&nbsp;&nbsp;Home</a></center>";

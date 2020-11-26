@@ -15,7 +15,7 @@ turf_name VARCHAR(255) NOT NULL,
   changingRoom VARCHAR(255) NOT NULL,
   size VARCHAR(255) NOT NULL,
   seating VARCHAR(255) NOT NULL,
-  booked BOOLEAN NOT NULL)";
+  booked BOOLEAN NOT NULL DEFAULT '0')";
 $results = mysqli_query($link, $sql) or die(mysqli_error($link));
 
 $sql2="CREATE TABLE IF NOT EXISTS turf_user(

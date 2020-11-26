@@ -13,6 +13,13 @@
 	<?php 
 
 	session_start();
+	if(!isset($_SESSION)){
+		session_start();
+}
+
+if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
+	header("location:homepage.php");
+} 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$email= $_POST['emailId'];
 		$user_password=$_POST["password"];
@@ -36,10 +43,10 @@
 								color: rgba(255,205,0, 1);
 								box-shadow: 7px 7px 10px #252525;'>Login Successful.
 						</div>";
-			$_SESSION["username"]=$email;
-			$_SESSION["loggedin"]=true;
-			if(isset($_SESSION["username"])){
-				header("location:../html/homepage.php");
+			$_SESSION["usernamead"]=$email;
+			$_SESSION["loggedinad"]=true;
+			if(isset($_SESSION["usernamead"])){
+				header("location:../admin/homepage.php");
 			}
 			else{
 				header("location:login.php");
