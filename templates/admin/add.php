@@ -12,20 +12,7 @@
     <script src="../js/register.js"></script>
     <?php
     include '../../mysqli_connect.php';
-    $sql = "CREATE TABLE IF NOT EXISTS turf(
-            id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-			turf_name VARCHAR(255) NOT NULL,
-            email VARCHAR(255) NOT NULL ,
-            contact_number VARCHAR(255) NOT NULL,
-            turf_address VARCHAR(255) NOT NULL,
-            timeslot_start DATETIME NOT NULL ,
-            timeslot_end DATETIME NOT NULL,
-            price VARCHAR(255) NOT NULL,
-            refreshments VARCHAR(255) NOT NULL,
-            changingRoom VARCHAR(255) NOT NULL,
-            size VARCHAR(255) NOT NULL,
-            seating VARCHAR(255) NOT NULL)";
-    $results = mysqli_query($link, $sql) or die(mysqli_error($link));
+ 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -86,7 +73,7 @@
 
 <body>
     <a class="homebutton" href="..\html\homepage.php"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Home</a>
-    <form id="regForm" name="regForm" action="booking.php" name="RegisterForm" onsubmit="return validatesignup()" method="POST">
+    <form id="regForm" name="regForm" action="add.php" name="RegisterForm" onsubmit="return validatesignup()" method="POST">
         <div class="yoo">
             <h4 class="title">Post</h4>
             <div class="title-text text-muted">Post a new turf entry</div>
@@ -132,7 +119,7 @@
                         
                         <label for="timeslot_start">From</label>
                         <input type="datetime-local" id="timeslot_start" name="timeslot_start" min="09:00" max="18:00" required>
-                        <label for="timeslot_start">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</label>
+                        <label for="timeslot_start">&nbsp;&nbsp;&nbsp;To</label>
                         <input type="datetime-local" id="timeslot_end" name="timeslot_end" min="09:00" max="18:00" required>
                        
                     </div>

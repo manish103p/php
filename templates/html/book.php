@@ -47,8 +47,8 @@
             session_start();
         }
             $email=$_SESSION['username']; 
-            $tripId=$_POST["tripId"];
-            $insert_query="insert into trip_user (email,trip_id) values ('$email','$tripId');";
+            $turfId=$_POST["turfId"];
+            $insert_query="insert into turf_user (email,turf_id) values ('$email','$turfId');";
             if(mysqli_query($link,$insert_query))
 				{ 
 					echo "<div style='background-color: rgb(0, 0, 0);
