@@ -49,7 +49,7 @@
                 session_start();
             }
             if(!isset($_SESSION['username']) or !isset($_SESSION['loggedin']) or $_SESSION['loggedin']!==true){
-                echo "<a href='login.php'>LogIn</a>";
+                echo "<a href='login.php'>LOG IN</a>";
             }
             else{                
                 echo "<a href='logout.php'>LogOut</a>";
@@ -130,7 +130,7 @@
 
 <section id="why-us"> 
 <br>
-<div class="heading" id="offer-text-head"><h1><span style="color:white">---------</span> What do we offer <span style="color:white">---------</span></h1></div>
+<div class="heading" id="offer-text-head"><h1> WHAT WE OFFER </h1></div>
     
     <div class="heading" id="offer-text"> Are you looking to play after work, organize your Sunday Five's football match? Explore the largest network of sports facilities whole over the India  </div>
     <div class="heading" id="offer-text"> Once you’ve found the perfect ground, court or gym, Connect with the venue through the Book Now Button to make online booking & secure easier payment </div>
@@ -139,35 +139,35 @@
   
   <div class="why-us-card">
     <img src="../images/home/why_us1.png" alt="Avatar" class="why-us-images">
-    <h3 class="inner" id="why">HOLIDAY CAMPING</h3>
+    <h3 class="inner" id="why">EXPLORE</h3>
   </div>
 
   <div class="why-us-card">
     <img src="../images/home/why_us2.png" alt="Avatar" class="why-us-images">
-    <h3 class="inner" id="why">HOLIDAY CAMPING</h3>
+    <h3 class="inner" id="why">BOOK</h3>
   </div>
   
   <div class="why-us-card">
     <img src="../images/home/why_us3.png" alt="Avatar" class="why-us-images">
-    <h3 class="inner" id="why">HOLIDAY CAMPING</h3>
+    <h3 class="inner" id="why">PLAY</h3>
   </div>
   
 </section>
 <br>
-<div class="heading" id="offer-text-head"><h1><span style="color:white">---------</span> What do we offer <span style="color:white">---------</span></h1></div>
+<div class="heading" id="offer-text-head"><h1> AVAILABLE OPTIONS </h1></div>
 
 
 <!--grid1 start -->
 <!-- CARDS -->
 
-<div class="card-group" style="padding-bottom:15px;border-bottom:1px solid white;">
+<div class="card-group" style="padding-bottom:15px;border-bottom:1px solid #606060ff;">
 <!-- card1 -->
   <div class="card" style="border-radius:10px;">
-    <img class="card-img-top" src="../images/home/background.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;">
-    <div class="card-body" style="border-bottom:1px solid black;border-top:1px solid black;color:white;background:black">
-      <h5 class="card-title">Kalsubai</h5>
-      <p class="card-text"><span>5400 ft.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="align-item:right;">6 Days</span></p>
-      <p class="card-text">Rs. 1500</p>
+    <img class="card-img-top" src="../images/home/turf1.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;">
+    <div class="card-body">
+      <h5 class="card-title">REAL ARENA TURF</h5>
+      <p class="card-title"><span>5400 ft.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="align-item:right;">6 Days</span></p>
+      <p class="card-title">Rs. 1500</p>
     </div>
     <div class="card-footer">
       <center>
@@ -662,45 +662,12 @@ if(isset($_SESSION['username']) and isset($_SESSION['loggedin']) and $_SESSION['
 
 </section>
 
-<section id ="youtubesection">
 
-  <div class="heading"><h1><span style="color:white">---------</span> Youtube Videos <span style="color:white">---------</span></h1></div>
- <center>
-<iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/gTTrjh3LZuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center> 
-<div></div>
-
-</section>
-
-<section id="outer-blog">
-
-<section id="blog-section">
-  <div class="heading" id="blog-main-head"><h1><span style="color:white">---------</span> Our Blogs <span style="color:white">---------</span></h1></div>
-  
-<div class="blog-card">
-  <img src="../images/home/blog1.jpg" alt="Avatar" class="blog-image">
-    <h4 class="blog-heading">How Trekking can heal a broken you</h4>
-    <a class="blog-link" href="#">Read More</a>
-</div>
-
-<div class="blog-card">
-  <img src="../images/home/blog3.jpg" alt="Avatar" class="blog-image">
-    <h4 class="blog-heading">How Trekking can heal a broken you</h4>
-    <a class="blog-link" href="#">Read More</a>
-</div>
-
-<div class="blog-card">
-  <img src="../images/home/blog2.jpg" alt="Avatar" class="blog-image">
-    <h4 class="blog-heading">Get Lost in the beauty of Himalaya</h4>
-    <a class="blog-link" href="#">Read More</a>
-</div>
-
-</section>
-</section>
 
 <footer>
- <p> COPYRIGHT @WORLD OF TREKKERS </p>
- <a class="homebutton" href='../admin/login.php'><i class="fa fa-caret-left" ></i>&nbsp;&nbsp;Admin</a>
+ <p> COPYRIGHT @WORLD OF TREKKERS
+ <a class="homebutton" href='../admin/login.php'><i class="fa fa-caret-left" ></i>&nbsp;&nbsp;Admin</a> </p>
+ 
 </footer>
     
 

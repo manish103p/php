@@ -100,7 +100,7 @@
                         <span class="input-group-addon">
                             <i class="fa fa-child"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="Enter the turf name" name="turf_name" required>
+                        <input type="text" class="form-control" placeholder="Enter turf name" name="turf_name" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -122,48 +122,44 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="fa fa-child"></i>
+                            <i class="fa fa-map-marker"></i>
                         </span>
                         <input type="text" class="form-control" placeholder="Enter address" name="turf_address" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-child"></i>
-                        </span>
-                        <label for="timeslot_start">From::</label>
+                        
+                        <label for="timeslot_start">From</label>
                         <input type="datetime-local" id="timeslot_start" name="timeslot_start" min="09:00" max="18:00" required>
-                        <br><label for="timeslot_start">To::</label>
+                        <label for="timeslot_start">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</label>
                         <input type="datetime-local" id="timeslot_end" name="timeslot_end" min="09:00" max="18:00" required>
-                        <br><small>Turf hours are 9am to 6pm</small>
+                       
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="fa fa-address-book"></i>
+                            <i class="fa fa-money"></i>
                         </span>
                         <input type="text" class="form-control" placeholder="price" name="price" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-child"></i> Amenities
-                        </span>
-                        <input type="checkbox" id="refreshments" name="refreshments" value=1>
-                        <br><label for="refreshments"> Refreshments Available</label><br>
-                        <input type="checkbox" id="changingRoom" name="changingRoom" value=1>
+                <div class="form-group" >Amenities: <br>
+                    
+                        
+                        <input class="form-check-input" type="checkbox" id="refreshments" name="refreshments" value=1>
+                        <label for="refreshments"> Refreshments Available</label><br>
+                        <input class="form-check-input" type="checkbox" id="changingRoom" name="changingRoom" value=1>
                         <label for="changingRoom"> Changing Room Available</label><br>
-                        <input type="checkbox" id="seating" name="seating" value=1>
-                        <label for="seating"> Seating Area Available</label><br><br>
-                    </div>
+                        <input class="form-check-input" type="checkbox" id="seating" name="seating" value=1>
+                        <label for="seating"> Seating Area Available</label>
+                    
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="fa fa-child"></i>
+                            <i class="fa fa-area-chart"></i>
                         </span>
                         <input type="text" class="form-control" placeholder="Enter turf size" name="size" required>
                     </div>

@@ -27,7 +27,7 @@ body{
     padding: 15px 19px;
     text-decoration: none;
     font-size: 1.2vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
     color: #d6ed17ff;
 }
 
@@ -98,7 +98,7 @@ body{
     color:#d6ed17ff;
     font-size: 1.5em !important;
     text-align: center;
-    font-family: Comic Sans MS !important;
+    
 }
 
 .inner{
@@ -106,7 +106,7 @@ body{
     padding-top: 0;
     text-align: center;
     color: #d6ed17ff;
-    font-family: sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
 
 }
 
@@ -120,7 +120,7 @@ body{
     margin-bottom: 15px;
     margin-left: 200px;
     width: 200px;
-    background:black;
+    background:#606060ff;
     color: white;
     height:auto ;
     padding: 10px;
@@ -131,18 +131,18 @@ body{
 }
 
 #offer-text{
-    color: white;
+    color: #d6ed17ff;
     margin-top: 5px;
     margin-bottom: 0px;
-    font-family: Mistral;
+    font-family: Tahoma, Geneva, sans-serif;
     font-size: 25;
 }
 
 #offer-text-head{
-    color: rgba(255,205,0, 1);
+    color: #d6ed17ff;
     margin-top: 5px;
     margin-bottom: 0px;
-    font-family: sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
     font-size: 25;
 }
 
@@ -156,17 +156,20 @@ body{
 }
 
 .card-body{
-    border-bottom:1px solid black;
-    border-top:1px solid black;
-    color:white;
-    background:black;
+    border-bottom:1px solid #d6ed17ff;
+    border-top:1px solid #d6ed17ff;
+    color:#606060ff;
+    background:#d6ed17ff;
     margin:3px;
+    border-bottom:1px solid #d6ed17ff;border-top:1px solid #d6ed17ff;color:#606060ff;background:#d6ed17ff
 }
-
+.card-title{
+    font-family: Impact, Charcoal, sans-serif;
+}
 .card-footer{
-    border-top:1px solid black;
-    color:white;
-    background:black;
+    border-top:1px solid #d6ed17ff;
+    color:#606060ff;
+    background:#606060ff;
     margin:3px;
 }
 
@@ -212,7 +215,7 @@ padding-bottom:15px;
 
 .blog-link{
     color: red;
-    font-family: sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
     font-size: 10;
 }
 
@@ -227,20 +230,20 @@ padding-bottom:15px;
 }
 
 .blog-heading{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
     color: white;
 
 }
     
 
 #why{
-    font-family:Courier ;
-    color: purple;
+    font-family:Impact, Charcoal, sans-serif ;
+    color: #d6ed17ff;
 }
 
 #why-us{
     border-top:1px solid white;
-    background-color: black;
+    background-color: #606060ff;
     border-bottom:1px solid white;
 }
 
