@@ -1,9 +1,9 @@
 body{
-    background-color:black;
+    background-color:#606060ff;
 }
 
 .black{
-    background:rgb(0,0,0);
+    background:#606060ff;
 }
 
 /*top navbar and banner*/
@@ -14,9 +14,9 @@ body{
 .topnav {
     position: absolute;
     width:100%;
-    background-color:rgba(0,0,0,0.7);
+    background-color:#606060ff;
     top:0;
-    border-bottom:2px solid rgb(0,0,0);
+    border-bottom:2px solid #606060ff;
 }
 
     /* Style the links inside the navigation bar */
@@ -39,7 +39,7 @@ body{
     /* Change the color of links on hover */
 .topnav a:hover {
     background-color:rgba(255,255,255,0.8);
-    color:black;
+    color:#606060ff;
 }
 
     /* Add a color to the active/current link */

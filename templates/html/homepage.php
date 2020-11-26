@@ -57,8 +57,8 @@
             }
         ?>
            
-            <a href="">Blogs</a>
-            <a href="">Home</a>
+            
+            
             <img style="width:70px;height:58px;padding:8px;" src="../images/home/WEBB png.png" />
         </div>
 
@@ -132,12 +132,10 @@
 <br>
 <div class="heading" id="offer-text-head"><h1><span style="color:white">---------</span> What do we offer <span style="color:white">---------</span></h1></div>
     
-    <div class="heading" id="offer-text"> Obivously you wont remember the time  </div>
-    <div class="heading" id="offer-text"> You spent in Class or an Office </div>
-    <div class="heading" id="offer-text"> We do whatever makes people happy, mostly travel  </div>
-    <div class="heading" id="offer-text"> because that’s something we do best, creating </div>
-    <div class="heading" id="offer-text"> cherishable memories and priceless smiles.</div>
-    <div class="heading" id="offer-text"> So go travel that Godamnnn place ! </div>
+    <div class="heading" id="offer-text"> Are you looking to play after work, organize your Sunday Five's football match? Explore the largest network of sports facilities whole over the India  </div>
+    <div class="heading" id="offer-text"> Once you’ve found the perfect ground, court or gym, Connect with the venue through the Book Now Button to make online booking & secure easier payment </div>
+    <div class="heading" id="offer-text"> You’re the hero, you’ve found a stunning turf or court, booked with ease and now its time to play. The scene is set for your epic match.  </div>
+    
   
   <div class="why-us-card">
     <img src="../images/home/why_us1.png" alt="Avatar" class="why-us-images">
