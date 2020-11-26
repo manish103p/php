@@ -702,6 +702,7 @@ if(isset($_SESSION['username']) and isset($_SESSION['loggedin']) and $_SESSION['
 
 <footer>
  <p> COPYRIGHT @WORLD OF TREKKERS </p>
+ <a class="homebutton" href='../admin/login.php'><i class="fa fa-caret-left" ></i>&nbsp;&nbsp;Admin</a>
 </footer>
     
 
