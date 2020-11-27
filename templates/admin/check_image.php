@@ -1,6 +1,4 @@
 <?php
-$link = mysqli_connect("localhost","root","","image")
-or die("Could not connect".mysqli_error());
 
 $image_caption = $_POST['image_caption'];
 $image_username = $_POST['image_username'];

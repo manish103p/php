@@ -1,8 +1,5 @@
 <?php
 
-$link = mysqli_connect("localhost","root","","image")
-or die("Could not connect".mysqli_error());
-
 
 
 $sql = "CREATE TABLE IF NOT EXISTS images(
@@ -21,10 +18,9 @@ echo "<h2>Table for storing images create successfully</h2>";
 <body>
 
 <form name="form1" action="check_image.php" enctype="multipart/form-data" method="post">
-Image Caption:<input type="text" name="image_caption" id="image_caption"><br>
-Username:<input type="text" name="image_username" id="image_username"><br>
+
 Upload Image:<input type="file" name="image_filename" id="image_filename"><br>
-<input type="submit" name="submit" value="Upload">
+
 </form>
 Here is your pic
 <img src="uploads/<?php echo $last_pic_id.$ext; ?>" align='center'>

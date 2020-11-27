@@ -70,7 +70,7 @@ echo '<div class="card-group" style="padding-bottom:15px;border-bottom:1px solid
 
 echo '<!-- card1 -->
   <div class="card" style="border-radius:10px;">
-    <img class="card-img-top" src="../admin/upload/'.$row['id'].'.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;height:50%;width:95%;  display: block;margin-left: auto;    margin-right: auto;">
+    <img class="card-img-top" src="../admin/upload/'.$row['id'].'.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;height:50%;width:95%; display: block;margin-left: auto;    margin-right: auto;">
     <div class="card-body">
       <h5 class="card-title">'.$row['turf_name'].'</h5>
       <p class="card-title"><span>'.$row['size'].' ft</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="align-item:right;"></span></p>
