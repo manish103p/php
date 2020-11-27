@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost","root","","user_trekker")
+$link = mysqli_connect("localhost","root","","book_turf")
 or die("Could not connect".mysqli_error($link));
 
 $sql = "CREATE TABLE IF NOT EXISTS turf(
