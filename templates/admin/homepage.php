@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>World of Trekkers</title>
-    <link rel="stylesheet" type="text/css" href="../css/homepage.css">
+    <title>ADMIN</title>
+    <link rel="stylesheet" type="text/css" href="../css/homepage_admin.css">
     <?php 
     if(!isset($_SESSION)){
         session_start();
@@ -20,11 +20,6 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
     header("location:login.php");
 }
     ?>
-    <style>
-       
-        
-
-    </style>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         include '../../mysqli_connect.php';
@@ -75,7 +70,7 @@ echo '<div class="card-group" style="padding-bottom:15px;border-bottom:1px solid
 
 echo '<!-- card1 -->
   <div class="card" style="border-radius:10px;">
-    <img class="card-img-top" src="../images/home/turf1.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;">
+    <img class="card-img-top" src="../admin/upload/'.$row['id'].'.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;height:50%;width:95%;  display: block;margin-left: auto;    margin-right: auto;">
     <div class="card-body">
       <h5 class="card-title">'.$row['turf_name'].'</h5>
       <p class="card-title"><span>'.$row['size'].' ft</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="align-item:right;"></span></p>
@@ -98,7 +93,13 @@ echo '<!-- card1 -->
             <div class="modal-body">
               <p>
                 <br>
-                Also known as Mount Everest of Maharashtra !Kalsubai Peak Trek with a height of 1646 meters or 5400 Feet is famous as the highest peaks in Maharashtra. Kalsubai Mountain lies in the Sahyadri mountain range falling under Kalsubai Harishchandragad Wildlife Sanctuary. Kalsubai Height being the highest peak, it commands a beautiful view. Since Bhandardara Dam and Kalsubai Peak is extremely famous, enough effort has been made to make this trek easy. There are steel railings, chains, and ladders at places where it is difficult to climb. 
+                <h5>EMAIL: &nbsp;'.$row['email'].'</h5>
+                <h5>CONTACT: &nbsp;'.$row['contact_number'].'</h5>
+                <h5>ADDRESS: &nbsp;'.$row['turf_address'].'</h5>
+                <h5>TIME SLOT START: &nbsp;'.$row['timeslot_start'].'</h5>
+                <h5>TIME SLOT END: &nbsp;'.$row['timeslot_end'].'</h5>
+                <h5>PRICE: &nbsp;'.$row['price'].'</h5>
+                <h5>SIZE: &nbsp;'.$row['size'].' square ft</h5> 
               
               </p>
             </div>

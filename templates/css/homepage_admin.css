@@ -1,9 +1,9 @@
 body{
-    background-color:#010101;
+    background-color:#ffffff;
 }
 
 .black{
-    background:#010101;
+    background:#ffffff;
 }
 
 /*top navbar and banner*/
@@ -14,9 +14,9 @@ body{
 .topnav {
     position: absolute;
     width:100%;
-    background-color:#010101;
+    background-color:#ffffff;
     top:0;
-    border-bottom:2px solid #010101;
+    border-bottom:2px solid #ffffff;
 }
 
     /* Style the links inside the navigation bar */
@@ -39,7 +39,7 @@ body{
     /* Change the color of links on hover */
 .topnav a:hover {
     background-color:#d6ed17ff;
-    color:#010101;
+    color:#ffffff;
 }
 
     /* Add a color to the active/current link */
@@ -66,14 +66,14 @@ body{
     margin-right: 7px;
     background:#d6ed17ff;
     height:auto ;
-    color:#010101;
+    color:#ffffff;
     border-radius: 10px;
-    border:3.5px solid #010101;
+    border:3.5px solid #ffffff;
     transition: margin 1s ease;
     
   }
 
-  .image_previous{
+  .trekk{
     margin: 0;
     width: 286px;
     height:176px ;
@@ -120,7 +120,7 @@ body{
     margin-bottom: 15px;
     margin-left: 200px;
     width: 200px;
-    background:#010101;
+    background:#ffffff;
     color: white;
     height:auto ;
     padding: 10px;
@@ -158,18 +158,18 @@ body{
 .card-body{
     border-bottom:1px solid #d6ed17ff;
     border-top:1px solid #d6ed17ff;
-    color:#010101;
+    color:#ffffff;
     background:#d6ed17ff;
     margin:3px;
-    border-bottom:1px solid #d6ed17ff;border-top:1px solid #d6ed17ff;color:#010101;background:#d6ed17ff
+    border-bottom:1px solid #d6ed17ff;border-top:1px solid #d6ed17ff;color:#ffffff;background:#d6ed17ff
 }
 .card-title{
     font-family: Impact, Charcoal, sans-serif;
 }
 .card-footer{
     border-top:1px solid #d6ed17ff;
-    color:#010101;
-    background:#010101;
+    color:#ffffff;
+    background:#ffffff;
     margin:3px;
 }
 
@@ -243,7 +243,7 @@ padding-bottom:15px;
 
 #why-us{
     border-top:1px solid white;
-    background-color: #010101;
+    background-color: #ffffff;
     border-bottom:1px solid white;
 }
 

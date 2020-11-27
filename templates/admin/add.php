@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
 }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+        $image_tmpname = $_FILES['image_filename']['name'];
         $turf_name = $_POST['turf_name'];
         $email = $_POST['emailId'];
         $contact_number = $_POST["contactNumber"];
@@ -39,8 +39,23 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
         else $changingRoom = 0;
         if (isset($_POST['seating'])) $seating = 1;
         else $seating = 0;
-        
 
+        $imgdir = "upload/";
+        $imgname = $imgdir.$image_tmpname;
+        if(move_uploaded_file($_FILES['image_filename']['tmp_name'], $imgname))
+        {
+        list($width,$height,$type,$attr)= getimagesize($imgname);
+        switch($type)
+        {
+         case 1:
+          $ext = ".gif"; break;
+         case 2:
+          $ext = ".jpg"; break;
+         case 3:
+          $ext = ".png"; break;
+         default:
+           echo "Not acceptable format of image";
+        }
 
         $insert_query = "insert into turf (turf_name,email,contact_number,turf_address,timeslot_start,timeslot_end,price,refreshments,changingRoom,size,seating) values ('$turf_name','$email','$contact_number','$turf_address','$timeslot_start','$timeslot_end','$price','$refreshments','$changingRoom','$size','$seating');";
         if (mysqli_query($link, $insert_query)) {
@@ -72,6 +87,17 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
 								box-shadow: 7px 7px 10px #252525;'>Some error occured. Turf has not been added.
 						</div>";
         }
+
+        
+        
+        $last_pic_id = mysqli_insert_id($link);
+        $newfilename = $imgdir.$last_pic_id.$ext;
+        rename($imgname,$newfilename); 
+        }
+        
+
+
+
     }
 
     mysqli_close($link);
@@ -82,7 +108,7 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
 
 <body>
     <a class="homebutton" href="..\admin\homepage.php"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Home</a>
-    <form id="regForm" name="regForm" action="add.php" name="RegisterForm" onsubmit="return validatesignup()" method="POST">
+    <form id="regForm" name="regForm" enctype="multipart/form-data" action="add.php" name="RegisterForm" onsubmit="return validatesignup()" method="POST">
         <div class="yoo">
             <h4 class="title">Post</h4>
             <div class="title-text text-muted">Post a new turf entry</div>
@@ -158,6 +184,14 @@ if (isset($_SESSION['loggedinad']) && $_SESSION['loggedinad'] == true) {
                             <i class="fa fa-area-chart"></i>
                         </span>
                         <input type="text" class="form-control" placeholder="Enter turf size" name="size" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                        </span>
+                        Upload Image:<input type="file" name="image_filename" id="image_filename"><br>
                     </div>
                 </div>
             </div>

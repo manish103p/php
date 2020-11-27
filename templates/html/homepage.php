@@ -168,8 +168,8 @@ echo '<div class="card-group" style="padding-bottom:15px;border-bottom:1px solid
 
 echo '<!-- card1 -->
   <div class="card" style="border-radius:10px;">
-    <img class="card-img-top" src="../images/home/turf1.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;">
-    <div class="card-body">
+  <img class="card-img-top" src="../admin/upload/'.$row['id'].'.jpg" alt="Card image cap" style="border-radius:8px;;padding:3px;height:50%;width:95%; display: block;margin-left: auto;    margin-right: auto;">
+  <div class="card-body">
       <h5 class="card-title">'.$row['turf_name'].'</h5>
       <p class="card-title"><span>'.$row['size'].' ft</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="align-item:right;"></span></p>
       <p class="card-title">Rs. '.$row['price'].'</p>
@@ -191,7 +191,13 @@ echo '<!-- card1 -->
             <div class="modal-body">
               <p>
                 <br>
-                Also known as Mount Everest of Maharashtra !Kalsubai Peak Trek with a height of 1646 meters or 5400 Feet is famous as the highest peaks in Maharashtra. Kalsubai Mountain lies in the Sahyadri mountain range falling under Kalsubai Harishchandragad Wildlife Sanctuary. Kalsubai Height being the highest peak, it commands a beautiful view. Since Bhandardara Dam and Kalsubai Peak is extremely famous, enough effort has been made to make this trek easy. There are steel railings, chains, and ladders at places where it is difficult to climb. 
+                <h5>EMAIL: &nbsp;'.$row['email'].'</h5>
+                <h5>CONTACT: &nbsp;'.$row['contact_number'].'</h5>
+                <h5>ADDRESS: &nbsp;'.$row['turf_address'].'</h5>
+                <h5>TIME SLOT START: &nbsp;'.$row['timeslot_start'].'</h5>
+                <h5>TIME SLOT END: &nbsp;'.$row['timeslot_end'].'</h5>
+                <h5>PRICE: &nbsp;'.$row['price'].'</h5>
+                <h5>SIZE: &nbsp;'.$row['size'].' square ft</h5> 
               
               </p>
             </div>
@@ -285,8 +291,8 @@ if(isset($_SESSION['username']) and isset($_SESSION['loggedin']) and $_SESSION['
     while($place=mysqli_fetch_array($turf,MYSQLI_BOTH)){
     if($row['turf_id']==$place['id'] ){
      
-     echo "<div class='purchase-card'>
-      <img src='../images/home/trip.jpg' alt='Avatar' class='trekk'>
+     echo "<div class='purchase-card' id='{$place['id']}'>
+     <img class='card-img-top' src='../admin/upload/{$place['id']}.jpg' alt='Card image cap' style='padding:3px;margin: 0;width: 286px;height:176px;border-radius: 7px;border-bottom:5px solid white;'>
       <div class='card-body'>
       <h5 class='card-title'>{$place['turf_name']}</h5>
           <p class='card-text'><span>{$place['size']} ft.</span></p>
